@@ -9,7 +9,12 @@ class JobOffers
 	 */
 	public function __construct() {
 
-		add_action( 'init', array( $this, 'create_cpt_joboffer' ), 10 );
+		if( !taxonomy_exists('jobexperience') )
+			add_action( 'init', array( $this, 'create_tax_expertise' ), 10 );
+
+		register_activation_hook( MGJO_FILE, array( $this, 'create_level_terms' ) );
+
+		add_action( 'init', array( $this, 'create_cpt_joboffer' ), 11 );
 
 		add_filter( 'enter_title_here', array( $this, 'change_title_placeholder' ) );
 
@@ -33,6 +38,52 @@ class JobOffers
 		return $title;
 	}
 
+
+	/**
+	 * Create Level Hierarchichal taxonomy
+	 */
+	public function create_tax_expertise(){
+
+		$args = array(
+			'label'         => __('Experiencias', MGJO_TDOMAIN),
+			'labels'        => array(
+								'name'                          => __('Experciencias', MGJO_TDOMAIN),
+								'singular_name'                 => __('Experciencia', MGJO_TDOMAIN),
+								'all_items'                     => __('Todas las experiencias', MGJO_TDOMAIN),
+								'edit_item'                     => __('Editar experiencia', MGJO_TDOMAIN),
+								'view_item'                     => __('Ver experiencia', MGJO_TDOMAIN),
+								'update_item'                   => __('Actualizar experiencia', MGJO_TDOMAIN),
+								'add_new_item'                  => __('Agregar nueva experiencia', MGJO_TDOMAIN),
+								'new_item_name'                 => __('Nueva experiencia', MGJO_TDOMAIN),
+								'search_items'                  => __('Buscar experiencias', MGJO_TDOMAIN),
+								'separate_items_with_commas'    => __('Separar experiencias por coma', MGJO_TDOMAIN),
+								'add_or_remove_items'           => __('Agregar o quitar experiencias', MGJO_TDOMAIN),
+								'not_found'                     => __('Experiencia no encontrada', MGJO_TDOMAIN)
+							),
+			'hierarchical'  => true
+		);
+
+		register_taxonomy( 'jobexperience', 'joboffer', $args );
+
+	}
+
+
+	/**
+	 * Create terms for jobexperience taxonomy
+	 */
+	public function create_level_terms(){
+
+		if( !taxonomy_exists('jobexperience') )
+			$this->create_tax_expertise();
+
+		if( !term_exists('Con experiencia', 'jobexperience' ) )
+			wp_insert_term('Con experiencia', 'jobexperience');
+		if( !term_exists('Recién licenciados', 'jobexperience' ) )
+			wp_insert_term('Recién licenciados', 'jobexperience');
+		if( !term_exists('Becarios', 'jobexperience' ) )
+			wp_insert_term('Becarios', 'jobexperience');
+
+	}
 
 
 	/**
@@ -68,7 +119,8 @@ class JobOffers
 			'supports'              => array( 'title', 'thumbnail' ),
 			'has_archive'           => true,
 			'capability_type'       => 'joboffer',
-			'mat_meta_cap'          => true
+			'mat_meta_cap'          => true,
+			'taxonomies'            => array('jobexperience')
 		);
 
 

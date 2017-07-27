@@ -14,6 +14,7 @@ Domain Path: /languages
 
 // CONSTANTS
 define( 'MGJO_TDOMAIN', 'mg-wp-job-offers');
+define( 'MGJO_FILE', __FILE__ );
 define( 'MGJO_PATH', dirname( __FILE__ ) );
 define( 'MGJO_FOLDER', basename( MGJO_PATH ) );
 define( 'MGJO_URL', plugins_url() . '/' . MGJO_FOLDER );
