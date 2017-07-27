@@ -66,7 +66,9 @@ class JobOffers
 			'menu_position'         => 19,
 			'menu_icon'             => MGJO_URL . '/assets/img/joboffer-icon.png',
 			'supports'              => array( 'title', 'thumbnail' ),
-			'has_archive'           => true
+			'has_archive'           => true,
+			'capability_type'       => 'joboffer',
+			'mat_meta_cap'          => true
 		);
 
 
