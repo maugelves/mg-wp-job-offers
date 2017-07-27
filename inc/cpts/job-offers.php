@@ -47,8 +47,8 @@ class JobOffers
 		$args = array(
 			'label'         => __('Experiencias', MGJO_TDOMAIN),
 			'labels'        => array(
-								'name'                          => __('Experciencias', MGJO_TDOMAIN),
-								'singular_name'                 => __('Experciencia', MGJO_TDOMAIN),
+								'name'                          => __('Experiencias', MGJO_TDOMAIN),
+								'singular_name'                 => __('Experiencia', MGJO_TDOMAIN),
 								'all_items'                     => __('Todas las experiencias', MGJO_TDOMAIN),
 								'edit_item'                     => __('Editar experiencia', MGJO_TDOMAIN),
 								'view_item'                     => __('Ver experiencia', MGJO_TDOMAIN),
