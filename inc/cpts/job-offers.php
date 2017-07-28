@@ -131,6 +131,8 @@ class JobOffers
 
 
 
+
+
 	/**
 	 * Customized messages for Sponsor Custom Post Type
 	 *
@@ -139,7 +141,7 @@ class JobOffers
 	 */
 	public function updated_messages_cb( $messages ) {
 
-		$messages['<CPT Name>'] = array(
+		$messages['joboffer'] = array(
 			0  => '', // Unused. Messages start at index 1.
 			1 => __( 'Trabajo actualizado.', MGJO_TDOMAIN ),
 			4 => __( 'Trabajo actualizado.', MGJO_TDOMAIN ),

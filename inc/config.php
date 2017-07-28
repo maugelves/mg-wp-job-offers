@@ -21,12 +21,12 @@ add_action('plugins_loaded', 'mgjo_after_theme_setup');
 function mgjo_acf_settings_localization($localization){
 	return true;
 }
-add_filter('acf/settings/l10n', 'custom_acf_settings_localization');
+add_filter('acf/settings/l10n', 'mgjo_acf_settings_localization');
 
 function mgjo_acf_settings_textdomain($domain){
 	return MGJO_TDOMAIN;
 }
-add_filter('acf/settings/l10n_textdomain', 'custom_acf_settings_textdomain');
+add_filter('acf/settings/l10n_textdomain', 'mgjo_acf_settings_textdomain');
 /* ======================================================================== */
 
 
