@@ -6,7 +6,7 @@
  *
  * @return string
  */
-function fn_mgjoform() {
+function fn_mgjo_applicant_form() {
 
 	// Variables
 	$output = "";
@@ -78,4 +78,4 @@ function fn_mgjoform() {
 	return $output;
 
 }
-add_shortcode( 'mgjoform', 'fn_mgjoform' );
+add_shortcode( 'mgjoapplicantform', 'fn_mgjo_applicant_form' );
