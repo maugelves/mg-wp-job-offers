@@ -74,3 +74,15 @@ foreach (glob(MGJO_PATH . "/inc/acfs/*.php") as $filename)
 */
 foreach (glob(MGJO_PATH . "/inc/shortcodes/*.php") as $filename)
 	include $filename;
+
+
+
+
+
+/*
+*   =================================================================================================
+*   HOOKS
+*   =================================================================================================
+*/
+foreach (glob(MGJO_PATH . "/inc/hooks/*.php") as $filename)
+	include $filename;

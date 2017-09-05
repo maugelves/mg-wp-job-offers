@@ -1,7 +1,7 @@
 [
     {
         "key": "group_597af78def82c",
-        "title": "Applicants",
+        "title": "Postulantes",
         "fields": [
             {
                 "key": "field_597af823a02b4",
@@ -28,7 +28,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "40",
+                    "width": "100",
                     "class": "",
                     "id": ""
                 },
@@ -42,9 +42,9 @@
                 "ui": 1
             },
             {
-                "key": "field_597af834a02b5",
-                "label": "Nombre Completo",
-                "name": "mgjoapp",
+                "key": "field_59ae818991b81",
+                "label": "Datos personales",
+                "name": "mgjoapp-user",
                 "type": "group",
                 "instructions": "",
                 "required": 0,
@@ -57,114 +57,36 @@
                 "layout": "block",
                 "sub_fields": [
                     {
-                        "ID": 169,
-                        "key": "field_597af8e8a02b6",
-                        "label": "Nombre",
-                        "name": "name",
-                        "prefix": "acf",
-                        "type": "text",
-                        "value": null,
-                        "menu_order": 0,
-                        "instructions": "",
-                        "required": 0,
-                        "id": "",
-                        "class": "",
-                        "conditional_logic": 0,
-                        "parent": 168,
-                        "wrapper": {
-                            "width": "33",
-                            "class": "",
-                            "id": ""
-                        },
-                        "_name": "name",
-                        "_prepare": 0,
-                        "_valid": 1,
-                        "default_value": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
-                    },
-                    {
-                        "ID": 170,
-                        "key": "field_597af8f2a02b7",
-                        "label": "Apellido",
-                        "name": "lastname",
-                        "prefix": "acf",
-                        "type": "text",
-                        "value": null,
-                        "menu_order": 1,
-                        "instructions": "",
-                        "required": 0,
-                        "id": "",
-                        "class": "",
-                        "conditional_logic": 0,
-                        "parent": 168,
-                        "wrapper": {
-                            "width": "33",
-                            "class": "",
-                            "id": ""
-                        },
-                        "_name": "lastname",
-                        "_prepare": 0,
-                        "_valid": 1,
-                        "default_value": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
-                    },
-                    {
-                        "ID": 173,
                         "key": "field_597af9b3a02ba",
                         "label": "Email",
                         "name": "email",
-                        "prefix": "acf",
                         "type": "email",
-                        "value": null,
-                        "menu_order": 2,
                         "instructions": "",
                         "required": 0,
-                        "id": "",
-                        "class": "",
                         "conditional_logic": 0,
-                        "parent": 168,
                         "wrapper": {
-                            "width": "33",
+                            "width": "25",
                             "class": "",
                             "id": ""
                         },
-                        "_name": "email",
-                        "_prepare": 0,
-                        "_valid": 1,
                         "default_value": "",
                         "placeholder": "",
                         "prepend": "",
                         "append": ""
                     },
                     {
-                        "ID": 177,
                         "key": "field_597afa6ea02be",
                         "label": "Número de móvil",
                         "name": "mobile",
-                        "prefix": "acf",
                         "type": "text",
-                        "value": null,
-                        "menu_order": 3,
                         "instructions": "",
                         "required": 0,
-                        "id": "",
-                        "class": "",
                         "conditional_logic": 0,
-                        "parent": 168,
                         "wrapper": {
-                            "width": "33",
+                            "width": "25",
                             "class": "",
                             "id": ""
                         },
-                        "_name": "mobile",
-                        "_prepare": 0,
-                        "_valid": 1,
                         "default_value": "",
                         "placeholder": "",
                         "prepend": "",
@@ -172,28 +94,18 @@
                         "maxlength": ""
                     },
                     {
-                        "ID": 175,
                         "key": "field_597afa07a02bc",
                         "label": "Sexo",
                         "name": "gender",
-                        "prefix": "acf",
                         "type": "select",
-                        "value": null,
-                        "menu_order": 4,
                         "instructions": "",
                         "required": 0,
-                        "id": "",
-                        "class": "",
                         "conditional_logic": 0,
-                        "parent": 168,
                         "wrapper": {
-                            "width": "33",
+                            "width": "25",
                             "class": "",
                             "id": ""
                         },
-                        "_name": "gender",
-                        "_prepare": 0,
-                        "_valid": 1,
                         "choices": {
                             "1": "Masculino",
                             "2": "Femenino"
@@ -209,28 +121,18 @@
                         "placeholder": ""
                     },
                     {
-                        "ID": 176,
                         "key": "field_597afa50a02bd",
                         "label": "Fecha de nacimiento",
                         "name": "birthdate",
-                        "prefix": "acf",
                         "type": "date_picker",
-                        "value": null,
-                        "menu_order": 5,
                         "instructions": "",
                         "required": 0,
-                        "id": "",
-                        "class": "",
                         "conditional_logic": 0,
-                        "parent": 168,
                         "wrapper": {
-                            "width": "33",
+                            "width": "25",
                             "class": "",
                             "id": ""
                         },
-                        "_name": "birthdate",
-                        "_prepare": 0,
-                        "_valid": 1,
                         "display_format": "d\/m\/Y",
                         "return_format": "d\/m\/Y",
                         "first_day": 1
@@ -240,7 +142,7 @@
             {
                 "key": "field_597b028befcbe",
                 "label": "Dirección",
-                "name": "mgjoapp",
+                "name": "mgjoapp-address",
                 "type": "group",
                 "instructions": "",
                 "required": 0,
@@ -253,57 +155,18 @@
                 "layout": "table",
                 "sub_fields": [
                     {
-                        "ID": 210,
-                        "key": "field_597b02b6efcbf",
-                        "label": "País de residencia",
-                        "name": "country",
-                        "prefix": "acf",
-                        "type": "text",
-                        "value": null,
-                        "menu_order": 0,
-                        "instructions": "",
-                        "required": 0,
-                        "id": "",
-                        "class": "",
-                        "conditional_logic": 0,
-                        "parent": 209,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "_name": "country",
-                        "_prepare": 0,
-                        "_valid": 1,
-                        "default_value": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
-                    },
-                    {
-                        "ID": 211,
-                        "key": "field_597b02c3efcc0",
+                        "key": "field_59ae81fc767d5",
                         "label": "Ciudad",
                         "name": "city",
-                        "prefix": "acf",
                         "type": "text",
-                        "value": null,
-                        "menu_order": 1,
                         "instructions": "",
                         "required": 0,
-                        "id": "",
-                        "class": "",
                         "conditional_logic": 0,
-                        "parent": 209,
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
-                        "_name": "city",
-                        "_prepare": 0,
-                        "_valid": 1,
                         "default_value": "",
                         "placeholder": "",
                         "prepend": "",
@@ -311,62 +174,42 @@
                         "maxlength": ""
                     },
                     {
-                        "ID": 212,
+                        "key": "field_59ae8219767d6",
+                        "label": "País de residencia",
+                        "name": "country",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
                         "key": "field_597b02daefcc1",
                         "label": "Nacionalidad",
                         "name": "nationality",
-                        "prefix": "acf",
                         "type": "text",
-                        "value": null,
-                        "menu_order": 2,
                         "instructions": "",
                         "required": 0,
-                        "id": "",
-                        "class": "",
                         "conditional_logic": 0,
-                        "parent": 209,
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
-                        "_name": "nationality",
-                        "_prepare": 0,
-                        "_valid": 1,
                         "default_value": "",
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
-                    },
-                    {
-                        "ID": 213,
-                        "key": "field_597b02f3efcc2",
-                        "label": "Movilidad Geográfica",
-                        "name": "geographical-mobility",
-                        "prefix": "acf",
-                        "type": "true_false",
-                        "value": null,
-                        "menu_order": 3,
-                        "instructions": "",
-                        "required": 0,
-                        "id": "",
-                        "class": "",
-                        "conditional_logic": 0,
-                        "parent": 209,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "_name": "geographical-mobility",
-                        "_prepare": 0,
-                        "_valid": 1,
-                        "message": "",
-                        "default_value": 0,
-                        "ui": 0,
-                        "ui_on_text": "",
-                        "ui_off_text": ""
                     }
                 ]
             },
@@ -390,7 +233,7 @@
                 "key": "field_597afaf8a02c1",
                 "label": "Años de experiencia",
                 "name": "mgjoapp-years-of-experience",
-                "type": "number",
+                "type": "taxonomy",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -399,13 +242,14 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "min": "",
-                "max": "",
-                "step": ""
+                "taxonomy": "jobexperience",
+                "field_type": "checkbox",
+                "allow_null": 0,
+                "add_term": 0,
+                "save_terms": 1,
+                "load_terms": 0,
+                "return_format": "id",
+                "multiple": 0
             },
             {
                 "key": "field_597afb10a02c2",
@@ -465,7 +309,7 @@
                 "key": "field_597afc72a02c4",
                 "label": "Idiomas",
                 "name": "mgjoapp-languages",
-                "type": "repeater",
+                "type": "taxonomy",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -474,75 +318,14 @@
                     "class": "",
                     "id": ""
                 },
-                "collapsed": "field_597afc84a02c5",
-                "min": 0,
-                "max": 0,
-                "layout": "table",
-                "button_label": "Agregar idioma",
-                "sub_fields": [
-                    {
-                        "key": "field_597afc84a02c5",
-                        "label": "Idioma",
-                        "name": "mgjoapp-language",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "1": "English",
-                            "2": "Español",
-                            "3": "中文",
-                            "4": "Français",
-                            "5": "العربية",
-                            "6": "Русский",
-                            "7": "Deutsch",
-                            "8": "にほんご",
-                            "9": "Português",
-                            "10": "Italiano"
-                        },
-                        "default_value": [
-                            2
-                        ],
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 0,
-                        "ajax": 0,
-                        "return_format": "value",
-                        "placeholder": ""
-                    },
-                    {
-                        "key": "field_597afdd2a02c6",
-                        "label": "Nivel",
-                        "name": "mgjoapp-level",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "1": "Nativo",
-                            "2": "Avanzado",
-                            "3": "Intermedio",
-                            "4": "Básico"
-                        },
-                        "default_value": [],
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 0,
-                        "ajax": 0,
-                        "return_format": "value",
-                        "placeholder": ""
-                    }
-                ]
+                "taxonomy": "language",
+                "field_type": "checkbox",
+                "allow_null": 0,
+                "add_term": 0,
+                "save_terms": 1,
+                "load_terms": 0,
+                "return_format": "id",
+                "multiple": 0
             },
             {
                 "key": "field_597afed8a02c7",
@@ -583,7 +366,7 @@
                 "key": "field_597b0082a02ca",
                 "label": "Títulos",
                 "name": "mgjoapp-degrees",
-                "type": "repeater",
+                "type": "textarea",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -592,51 +375,11 @@
                     "class": "",
                     "id": ""
                 },
-                "collapsed": "field_597b0102a02cc",
-                "min": 0,
-                "max": 0,
-                "layout": "table",
-                "button_label": "Agregar título",
-                "sub_fields": [
-                    {
-                        "key": "field_597b00d1a02cb",
-                        "label": "Centro Educativo",
-                        "name": "mgjoapp-educenter",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
-                    },
-                    {
-                        "key": "field_597b0102a02cc",
-                        "label": "Título Académico",
-                        "name": "mgjoapp-degree",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
-                    }
-                ]
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 5,
+                "new_lines": "br"
             }
         ],
         "location": [

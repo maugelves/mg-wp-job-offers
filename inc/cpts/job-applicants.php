@@ -71,7 +71,7 @@ class JobApplicants
 		$args = array(
 			'label'                 => __( 'Postulantes', MGJO_TDOMAIN ),
 			'labels'                => $labels,
-			'supports'              => false,
+			'supports'              => array('title'),
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,

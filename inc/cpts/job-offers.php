@@ -12,7 +12,8 @@ class JobOffers
 		if( !taxonomy_exists('jobexperience') )
 			add_action( 'init', array( $this, 'create_tax_expertise' ), 10 );
 
-		register_activation_hook( MGJO_FILE, array( $this, 'create_level_terms' ) );
+		if( !taxonomy_exists('languages') )
+			add_action( 'init', array( $this, 'create_tax_languages' ), 10 );
 
 		add_action( 'init', array( $this, 'create_cpt_joboffer' ), 11 );
 
@@ -45,9 +46,9 @@ class JobOffers
 	public function create_tax_expertise(){
 
 		$args = array(
-			'label'         => __('Experiencias', MGJO_TDOMAIN),
+			'label'         => __('Experiencia', MGJO_TDOMAIN),
 			'labels'        => array(
-								'name'                          => __('Experiencias', MGJO_TDOMAIN),
+								'name'                          => __('Experiencia', MGJO_TDOMAIN),
 								'singular_name'                 => __('Experiencia', MGJO_TDOMAIN),
 								'all_items'                     => __('Todas las experiencias', MGJO_TDOMAIN),
 								'edit_item'                     => __('Editar experiencia', MGJO_TDOMAIN),
@@ -68,22 +69,37 @@ class JobOffers
 	}
 
 
+
 	/**
-	 * Create terms for jobexperience taxonomy
+	 * Create Level Hierarchichal taxonomy
 	 */
-	public function create_level_terms(){
+	public function create_tax_languages() {
 
-		if( !taxonomy_exists('jobexperience') )
-			$this->create_tax_expertise();
+		$args = array(
+			'label'         => __('Idiomas', MGJO_TDOMAIN),
+			'labels'        => array(
+				'name'                          => __('Idiomas', MGJO_TDOMAIN),
+				'singular_name'                 => __('Idioma', MGJO_TDOMAIN),
+				'all_items'                     => __('Todas los idiomas', MGJO_TDOMAIN),
+				'edit_item'                     => __('Editar idioma', MGJO_TDOMAIN),
+				'view_item'                     => __('Ver idioma', MGJO_TDOMAIN),
+				'update_item'                   => __('Actualizar idioma', MGJO_TDOMAIN),
+				'add_new_item'                  => __('Agregar nuevo idioma', MGJO_TDOMAIN),
+				'new_item_name'                 => __('Nuevo idioma', MGJO_TDOMAIN),
+				'search_items'                  => __('Buscar idiomas', MGJO_TDOMAIN),
+				'separate_items_with_commas'    => __('Separar idiomas por coma', MGJO_TDOMAIN),
+				'add_or_remove_items'           => __('Agregar o quitar idiomas', MGJO_TDOMAIN),
+				'not_found'                     => __('idioma no encontrado', MGJO_TDOMAIN)
+			),
+			'hierarchical'  => true
+		);
 
-		if( !term_exists('Con experiencia', 'jobexperience' ) )
-			wp_insert_term('Con experiencia', 'jobexperience');
-		if( !term_exists('Recién licenciados', 'jobexperience' ) )
-			wp_insert_term('Recién licenciados', 'jobexperience');
-		if( !term_exists('Becarios', 'jobexperience' ) )
-			wp_insert_term('Becarios', 'jobexperience');
+		register_taxonomy( 'languages', 'joboffer', $args );
 
 	}
+
+
+
 
 
 	/**
