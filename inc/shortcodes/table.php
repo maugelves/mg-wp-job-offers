@@ -22,8 +22,8 @@ function fn_xelio_open_jobs(){
 		$output .= '<table class="mgjotbl">';
 		$output .= '<tr>';
 		$output .= '<th class="mgjotbl__th">' . __("Nombre del puesto", "xelio-wp-projects") . '</th>';
-		$output .= '<th class="mgjotbl__th mgjotbl__hidexs">' . __("Lugar", "xelio-wp-projects") . '</th>';
-		$output .= '<th>' . __("Experiencia", "xelio-wp-projects") . '</th>';
+		$output .= '<th class="mgjotbl__th mgjotbl__visiblelg">' . __("Lugar", "xelio-wp-projects") . '</th>';
+		$output .= '<th class="mgjotbl__th mgjotbl__hidexs">' . __("Experiencia", "xelio-wp-projects") . '</th>';
 		$output .= '<th class="mgjotbl__th"></th>';
 		$output .= '</tr>';
 
@@ -35,9 +35,9 @@ function fn_xelio_open_jobs(){
 
 			$output .= '<tr>';
 			$output .= '<td>' . $openjob->get_title() . '</td>';
-			$output .= '<td class="mgjotbl__hidexs">' . $openjob->get_place() . '</td>';
-			$output .= '<td>' . $taxleves_str . '</td>';
-			$output .= '<td class="mgjotbl__tdright"><a href="' . $openjob->get_link() . '"><span class="icon-xe-plus-icon xepptbl__icon"></span></a></td>';
+			$output .= '<td class="mgjotbl__visiblelg">' . $openjob->get_place() . '</td>';
+			$output .= '<td class="mgjotbl__hidexs">' . $taxleves_str . '</td>';
+			$output .= '<td class="mgjotbl__tdright"><a href="' . $openjob->get_link() . '"><span class="icon-xe-plus-icon mgjotbl__icon"></span></a></td>';
 			$output .= '</tr>';
 
 		endforeach;
