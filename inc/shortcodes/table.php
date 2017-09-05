@@ -29,10 +29,14 @@ function fn_xelio_open_jobs(){
 
 		foreach( $openjobs as $openjob ): /* @var $openjob \MGJO\models\OpenJob */
 
+			// Variables
+			$taxlevels = wp_get_post_terms( $openjob->get_ID(), 'openjoblevel', ['fields' => 'names'] );
+			$taxleves_str = empty( $taxlevels ) ? "" : implode( ", ", $taxlevels );
+
 			$output .= '<tr>';
 			$output .= '<td>' . $openjob->get_title() . '</td>';
 			$output .= '<td class="mgjotbl__hidexs">' . $openjob->get_place() . '</td>';
-			$output .= '<td>' . $openjob->get_requirements() . '</td>';
+			$output .= '<td>' . $taxleves_str . '</td>';
 			$output .= '<td class="mgjotbl__tdright"><a href="' . $openjob->get_link() . '"><span class="icon-xe-plus-icon xepptbl__icon"></span></a></td>';
 			$output .= '</tr>';
 

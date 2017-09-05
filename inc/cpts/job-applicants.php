@@ -17,7 +17,7 @@ class JobApplicants
 		if( !taxonomy_exists('languages') )
 			add_action( 'init', array( $this, 'create_tax_languages' ), 10 );
 
-		add_action('admin_menu', array($this, 'add_applicants_menu_link') );
+		//add_action('admin_menu', array($this, 'add_applicants_menu_link') );
 
 		add_filter( 'post_updated_messages', array($this, 'updated_messages_cb' ) );
 
@@ -28,11 +28,11 @@ class JobApplicants
 
 
 
-	function add_applicants_menu_link() {
+	/*function add_applicants_menu_link() {
 		global $submenu;
 		$permalink  = admin_url() . 'edit.php?post_type=jobapplicant';
 		$submenu['edit.php?post_type=joboffer'][] = array( __('Postulantes', MGJO_TDOMAIN ), 'edit_applicant', $permalink );
-	}
+	}*/
 
 
 	/**
@@ -84,7 +84,7 @@ class JobApplicants
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,
-			'show_in_menu'          => false,
+			'show_in_menu'          => true,
 			'menu_position'         => 20,
 			'menu_icon'             => 'dashicons-welcome-learn-more',
 			'show_in_admin_bar'     => true,
@@ -95,6 +95,7 @@ class JobApplicants
 			'publicly_queryable'    => true,
 			'rewrite'               => $rewrite,
 			'capabilities'          => $capabilities,
+			'taxonomies'            => array('jobexperience', 'languages')
 		);
 
 		register_post_type( 'jobapplicant', $args );
@@ -104,14 +105,14 @@ class JobApplicants
 
 
 	/**
-	 * Create Level Hierarchichal taxonomy
+	 * Create Expertise taxonomy
 	 */
 	public function create_tax_expertise(){
 
 		$args = array(
 			'label'         => __('Experiencia', MGJO_TDOMAIN),
 			'labels'        => array(
-				'name'                          => __('Experiencia', MGJO_TDOMAIN),
+				'name'                          => __('Años Experiencia', MGJO_TDOMAIN),
 				'singular_name'                 => __('Experiencia', MGJO_TDOMAIN),
 				'all_items'                     => __('Todas las experiencias', MGJO_TDOMAIN),
 				'edit_item'                     => __('Editar experiencia', MGJO_TDOMAIN),
@@ -125,8 +126,7 @@ class JobApplicants
 				'not_found'                     => __('Experiencia no encontrada', MGJO_TDOMAIN)
 			),
 			'hierarchical'  => true,
-			'show_ui'       => false,
-			'taxonomies'    => array('jobexperience', 'languages')
+			'meta_box_cb'   => false
 		);
 
 		register_taxonomy( 'jobexperience', 'jobapplicant', $args );

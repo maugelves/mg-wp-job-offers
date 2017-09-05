@@ -15,6 +15,9 @@ class JobOffers
 
 		add_filter( 'post_updated_messages', array($this, 'updated_messages_cb' ) );
 
+		if( !taxonomy_exists('openjoblevel') )
+			add_action( 'init', array( $this, 'create_tax_openjoblevel' ), 10 );
+
 	}
 
 	/**
@@ -35,6 +38,32 @@ class JobOffers
 
 
 
+
+	/**
+	 * Create Level Hierarchichal taxonomy
+	 */
+	function create_tax_openjoblevel() {
+		$args = array(
+			'label'         => __('Nivel de Experiencia', MGJO_TDOMAIN),
+			'labels'        => array(
+				'name'                          => __('Nivel', MGJO_TDOMAIN),
+				'singular_name'                 => __('Nivel', MGJO_TDOMAIN),
+				'all_items'                     => __('Todas las niveles', MGJO_TDOMAIN),
+				'edit_item'                     => __('Editar nivel', MGJO_TDOMAIN),
+				'view_item'                     => __('Ver nivel', MGJO_TDOMAIN),
+				'update_item'                   => __('Actualizar nivel', MGJO_TDOMAIN),
+				'add_new_item'                  => __('Agregar nuevo nivel', MGJO_TDOMAIN),
+				'new_item_name'                 => __('Nueva nivel', MGJO_TDOMAIN),
+				'search_items'                  => __('Buscar niveles', MGJO_TDOMAIN),
+				'separate_items_with_commas'    => __('Separar niveles por coma', MGJO_TDOMAIN),
+				'add_or_remove_items'           => __('Agregar o quitar niveles', MGJO_TDOMAIN),
+				'not_found'                     => __('Nivel no encontrado', MGJO_TDOMAIN)
+			),
+			'hierarchical'  => true
+		);
+
+		register_taxonomy( 'openjoblevel', 'joboffer', $args );
+	}
 
 
 
@@ -84,7 +113,8 @@ class JobOffers
 			'supports'              => array( 'title', 'thumbnail' ),
 			'has_archive'           => true,
 			'capabilities'          => $capabilities,
-			'mat_meta_cap'          => true
+			'mat_meta_cap'          => true,
+			'taxonomies'            => array('openjoblevel')
 		);
 
 
