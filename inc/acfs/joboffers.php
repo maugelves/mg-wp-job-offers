@@ -9,7 +9,7 @@ if( function_exists('acf_add_local_field_group') ):
 			array (
 				'key' => 'field_59ae90b5ddeb3',
 				'label' => __('Lugar', 'xelio-wp-projects'),
-				'name' => 'lugar',
+				'name' => 'mgjo-place',
 				'type' => 'text',
 				'instructions' => __('Indique la ciudad y país del puesto de trabajo', 'xelio-wp-projects'),
 				'required' => 0,

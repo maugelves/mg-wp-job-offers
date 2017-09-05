@@ -1,7 +1,5 @@
 <?php
 
-namespace MGJO\Service;
-
 use MGJO\models\OpenJob;
 use MGJO\Helpers;
 
@@ -24,6 +22,7 @@ class OpenJobs extends Helpers\Singleton {
 		// Set Values
 		$openjob->set_ID( $post->ID );
 		$openjob->set_title( $post->post_title );
+		$openjob->set_link( get_permalink( $openjob->get_ID() ) );
 
 		// Should the function complete the rest of the fields
 		if( $fill_fields ):
@@ -31,8 +30,8 @@ class OpenJobs extends Helpers\Singleton {
 			$openjob_meta  = get_fields( $post->ID );
 
 			if( !empty( $openjob_meta['mgjo-place'] ) ) $openjob->set_place( esc_html( $openjob_meta['mgjo-place'] ) );
-			if( !empty( $openjob_meta['mgjo-responsibility'] ) ) $openjob->set_responsabilities( esc_html( $openjob_meta['mgjo-responsibility'] ) );
-			if( !empty( $openjob_meta['mgjo-requirements'] ) ) $openjob->set_requirements( esc_html( $openjob_meta['mgjo-requirements'] ) );
+			if( !empty( $openjob_meta['mgjo-responsibility'] ) ) $openjob->set_responsabilities( $openjob_meta['mgjo-responsibility'] );
+			if( !empty( $openjob_meta['mgjo-requirements'] ) ) $openjob->set_requirements( $openjob_meta['mgjo-requirements'] ) ;
 			if( !empty( $openjob_meta['mgjo-salary-min'] ) ) $openjob->set_salarymin( esc_html( $openjob_meta['mgjo-salary-min'] ) );
 			if( !empty( $openjob_meta['mgjo-salary-max'] ) ) $openjob->set_salarymin( esc_html( $openjob_meta['mgjo-salary-max'] ) );
 
@@ -50,9 +49,10 @@ class OpenJobs extends Helpers\Singleton {
 	 *
 	 * @author  Mauricio Gelves <mg@maugelves.com>
 	 * @param   $args   array
+	 * @param   $fill_fields    bool    if true the function fills all the object fields
 	 * @return  array   Array of OpenJob Objects
 	 */
-	public function get_all( $args = null ) {
+	public function get_all( $args = null, $fill_fields = true ) {
 
 		// Variables
 		$openjobs = array();
@@ -74,7 +74,7 @@ class OpenJobs extends Helpers\Singleton {
 
 			while( $query->have_posts() ): $query->the_post();
 
-				$openjob = $this->get_openjob_from_post( $query->post );
+				$openjob = $this->get_openjob_from_post( $query->post, $fill_fields );
 				array_push( $openjobs, $openjob );
 
 			endwhile;

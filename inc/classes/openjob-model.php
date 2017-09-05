@@ -7,6 +7,7 @@ class OpenJob {
 	// Variables
 	private $ID                 = 0;
 	private $title              = 0;
+	private $link               = "";
 	private $place              = null;
 	private $responsabilities   = null;
 	private $requirements       = null;
@@ -41,6 +42,20 @@ class OpenJob {
 	 */
 	public function set_title( $title ) {
 		$this->title = $title;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function get_link() {
+		return $this->link;
+	}
+
+	/**
+	 * @param string $link
+	 */
+	public function set_link( $link ) {
+		$this->link = $link;
 	}
 
 	/**

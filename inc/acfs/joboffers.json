@@ -6,7 +6,7 @@
             {
                 "key": "field_59ae90b5ddeb3",
                 "label": "Lugar",
-                "name": "lugar",
+                "name": "mgjo-place",
                 "type": "text",
                 "instructions": "Indique la ciudad y país del puesto de trabajo",
                 "required": 0,
