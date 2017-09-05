@@ -4,6 +4,25 @@
         "title": "Trabajos",
         "fields": [
             {
+                "key": "field_59ae90b5ddeb3",
+                "label": "Lugar",
+                "name": "lugar",
+                "type": "text",
+                "instructions": "Indique la ciudad y país del puesto de trabajo",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_5979d19f45d37",
                 "label": "Responsabilidades",
                 "name": "mgjo-responsibility",
@@ -57,28 +76,18 @@
                 "layout": "table",
                 "sub_fields": [
                     {
-                        "ID": 132,
                         "key": "field_5979d2da8dd60",
                         "label": "Salario mínimo",
                         "name": "salary-min",
-                        "prefix": "acf",
                         "type": "number",
-                        "value": null,
-                        "menu_order": 0,
                         "instructions": "",
                         "required": 0,
-                        "id": "",
-                        "class": "",
                         "conditional_logic": 0,
-                        "parent": 131,
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
-                        "_name": "salary-min",
-                        "_prepare": 0,
-                        "_valid": 1,
                         "default_value": "",
                         "placeholder": "",
                         "prepend": "",
@@ -88,28 +97,18 @@
                         "step": ""
                     },
                     {
-                        "ID": 133,
                         "key": "field_5979d3008dd61",
                         "label": "Salario máximo",
                         "name": "salary-max",
-                        "prefix": "acf",
                         "type": "number",
-                        "value": null,
-                        "menu_order": 1,
                         "instructions": "",
                         "required": 0,
-                        "id": "",
-                        "class": "",
                         "conditional_logic": 0,
-                        "parent": 131,
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
-                        "_name": "salary-max",
-                        "_prepare": 0,
-                        "_valid": 1,
                         "default_value": "",
                         "placeholder": "",
                         "prepend": "",
