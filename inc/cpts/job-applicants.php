@@ -11,9 +11,18 @@ class JobApplicants
 
 		add_action( 'init', array( $this, 'create_cpt_applicants' ), 12 );
 
+		if( !taxonomy_exists('jobexperience') )
+			add_action( 'init', array( $this, 'create_tax_expertise' ), 10 );
+
+		if( !taxonomy_exists('languages') )
+			add_action( 'init', array( $this, 'create_tax_languages' ), 10 );
+
 		add_action('admin_menu', array($this, 'add_applicants_menu_link') );
 
 		add_filter( 'post_updated_messages', array($this, 'updated_messages_cb' ) );
+
+
+		add_filter( 'enter_title_here', array( $this, 'change_title_placeholder' ) );
 
 	}
 
@@ -90,6 +99,87 @@ class JobApplicants
 
 		register_post_type( 'jobapplicant', $args );
 
+	}
+
+
+
+	/**
+	 * Create Level Hierarchichal taxonomy
+	 */
+	public function create_tax_expertise(){
+
+		$args = array(
+			'label'         => __('Experiencia', MGJO_TDOMAIN),
+			'labels'        => array(
+				'name'                          => __('Experiencia', MGJO_TDOMAIN),
+				'singular_name'                 => __('Experiencia', MGJO_TDOMAIN),
+				'all_items'                     => __('Todas las experiencias', MGJO_TDOMAIN),
+				'edit_item'                     => __('Editar experiencia', MGJO_TDOMAIN),
+				'view_item'                     => __('Ver experiencia', MGJO_TDOMAIN),
+				'update_item'                   => __('Actualizar experiencia', MGJO_TDOMAIN),
+				'add_new_item'                  => __('Agregar nueva experiencia', MGJO_TDOMAIN),
+				'new_item_name'                 => __('Nueva experiencia', MGJO_TDOMAIN),
+				'search_items'                  => __('Buscar experiencias', MGJO_TDOMAIN),
+				'separate_items_with_commas'    => __('Separar experiencias por coma', MGJO_TDOMAIN),
+				'add_or_remove_items'           => __('Agregar o quitar experiencias', MGJO_TDOMAIN),
+				'not_found'                     => __('Experiencia no encontrada', MGJO_TDOMAIN)
+			),
+			'hierarchical'  => true,
+			'show_ui'       => false,
+			'taxonomies'    => array('jobexperience', 'languages')
+		);
+
+		register_taxonomy( 'jobexperience', 'jobapplicant', $args );
+
+	}
+
+
+
+	/**
+	 * Create Level Hierarchichal taxonomy
+	 */
+	public function create_tax_languages() {
+
+		$args = array(
+			'label'         => __('Idiomas', MGJO_TDOMAIN),
+			'labels'        => array(
+				'name'                          => __('Idiomas', MGJO_TDOMAIN),
+				'singular_name'                 => __('Idioma', MGJO_TDOMAIN),
+				'all_items'                     => __('Todas los idiomas', MGJO_TDOMAIN),
+				'edit_item'                     => __('Editar idioma', MGJO_TDOMAIN),
+				'view_item'                     => __('Ver idioma', MGJO_TDOMAIN),
+				'update_item'                   => __('Actualizar idioma', MGJO_TDOMAIN),
+				'add_new_item'                  => __('Agregar nuevo idioma', MGJO_TDOMAIN),
+				'new_item_name'                 => __('Nuevo idioma', MGJO_TDOMAIN),
+				'search_items'                  => __('Buscar idiomas', MGJO_TDOMAIN),
+				'separate_items_with_commas'    => __('Separar idiomas por coma', MGJO_TDOMAIN),
+				'add_or_remove_items'           => __('Agregar o quitar idiomas', MGJO_TDOMAIN),
+				'not_found'                     => __('idioma no encontrado', MGJO_TDOMAIN)
+			),
+			'hierarchical'  => true,
+			'show_ui'       => false
+		);
+
+		register_taxonomy( 'languages', 'jobapplicant', $args );
+
+	}
+
+
+
+	/**
+	 *  Change the Post Title placeholder
+	 *  @param $title
+	 *
+	 *  @return string
+	 */
+	public function change_title_placeholder( $title ) {
+		$screen = get_current_screen();
+
+		if  ( 'joboffer' == $screen->post_type )
+			$title = __('Nombre del postulante', MGJO_TDOMAIN );
+
+
+		return $title;
 	}
 
 
