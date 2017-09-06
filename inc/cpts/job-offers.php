@@ -110,7 +110,7 @@ class JobOffers
 			'show_ui'               => true,
 			'menu_position'         => 19,
 			'menu_icon'             => MGJO_URL . '/assets/img/joboffer-icon.png',
-			'supports'              => array( 'title', 'thumbnail' ),
+			'supports'              => array( 'title' ),
 			'has_archive'           => true,
 			'capabilities'          => $capabilities,
 			'mat_meta_cap'          => true,
