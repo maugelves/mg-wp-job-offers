@@ -25,8 +25,8 @@
             {
                 "key": "field_5979d19f45d37",
                 "label": "Responsabilidades",
-                "name": "mgjo-responsibility",
-                "type": "wysiwyg",
+                "name": "mgjo-responsibilities",
+                "type": "repeater",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -35,17 +35,38 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 0,
-                "delay": 0
+                "collapsed": "field_59afca7a98cef",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Agregar responsabilidad",
+                "sub_fields": [
+                    {
+                        "key": "field_59afca7a98cef",
+                        "label": "Responsabilidad",
+                        "name": "mgjo-responsibility",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 4,
+                        "new_lines": ""
+                    }
+                ]
             },
             {
                 "key": "field_5979d1f445d38",
                 "label": "Requisitos",
                 "name": "mgjo-requirements",
-                "type": "wysiwyg",
+                "type": "repeater",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -54,11 +75,32 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 0,
-                "delay": 0
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Agrear requisito",
+                "sub_fields": [
+                    {
+                        "key": "field_59afcac298cf0",
+                        "label": "Requerimiento",
+                        "name": "mgjo-requirement",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 4,
+                        "new_lines": ""
+                    }
+                ]
             },
             {
                 "key": "field_5979d2bf8dd5f",
@@ -136,7 +178,6 @@
         "instruction_placement": "label",
         "hide_on_screen": [
             "permalink",
-            "the_content",
             "excerpt",
             "custom_fields",
             "discussion",
