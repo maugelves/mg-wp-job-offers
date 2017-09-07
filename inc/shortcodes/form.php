@@ -85,11 +85,28 @@ function fn_mgjo_applicant_form() {
             ?>
         </div>
 
+        <div class="mgjoform__row">
+            <label for="txtdescription"><?php _e("Experiencia profesional","mg-wp-job-offers"); ?>:</label>
+            <textarea name="txtdescription" id="txtdescription" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="mgjoform__row">
+            <label for="txtlanguages"><?php _e("Idiomas","mg-wp-job-offers"); ?>:</label>
+            <?php echo get_terms_chekboxes('languages', $args = array('hide_empty'=>false)); ?>
+        </div>
+
+
+        <div class="mgjoform__row">
+            <label for="txteducation"><?php _e("Educación","mg-wp-job-offers"); ?>:</label>
+            <textarea name="txteducation" id="txteducation" cols="30" rows="10"></textarea>
+        </div>
+
         <?php //TODO: Agregar el ID de la oferta de trabajo en un hidden ?>
 
 		<input type="hidden" name="action" value="newapplicant">
 
-		<input type="submit" value="Enviar">
+		<input type="submit" value="<?php _e("Enviar candidatura","mg-wp-job-offers"); ?>">
+        
 	</form>
 	
 
