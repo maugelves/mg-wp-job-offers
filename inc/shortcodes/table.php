@@ -13,7 +13,7 @@ function fn_xelio_open_jobs(){
 		'meta_key' => 'mgjo-place'
 	);
 
-	$openjobs = OpenJobs::getInstance()->get_all( $args, true );
+	$openjobs = \MGJO\Service\OpenJobs::getInstance()->get_all( $args, true );
 
 
 
@@ -35,7 +35,7 @@ function fn_xelio_open_jobs(){
 			$link           = apply_filters( 'mgjo_joboffer_link', $openjob->get_link(), $openjob->get_ID() );
 
 
-			$output .= '<tr>';
+			$output .= '<tr onclick="window.location.href = \'' . $link . '\';">';
 			$output .= '<td>' . $openjob->get_title() . '</td>';
 			$output .= '<td class="mgjotbl__visiblelg">' . $openjob->get_place() . '</td>';
 			$output .= '<td class="mgjotbl__hidexs">' . $taxleves_str . '</td>';

@@ -1,12 +1,13 @@
 <?php
 
-namespace MGJO\models;
+namespace MGJO\Models;
 
 class OpenJob {
 
 	// Variables
 	private $ID                 = 0;
 	private $title              = 0;
+	private $desciption         = "";
 	private $link               = "";
 	private $place              = null;
 	private $responsabilities   = null;
@@ -42,6 +43,20 @@ class OpenJob {
 	 */
 	public function set_title( $title ) {
 		$this->title = $title;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function get_desciption() {
+		return $this->desciption;
+	}
+
+	/**
+	 * @param string $desciption
+	 */
+	public function set_desciption( $desciption ) {
+		$this->desciption = $desciption;
 	}
 
 	/**

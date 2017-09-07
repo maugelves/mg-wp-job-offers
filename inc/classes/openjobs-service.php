@@ -1,5 +1,7 @@
 <?php
 
+namespace MGJO\Service;
+
 use MGJO\models\OpenJob;
 use MGJO\Helpers;
 
@@ -22,6 +24,7 @@ class OpenJobs extends Helpers\Singleton {
 		// Set Values
 		$openjob->set_ID( $post->ID );
 		$openjob->set_title( $post->post_title );
+		$openjob->set_desciption( $post->post_content );
 		$openjob->set_link( get_permalink( $openjob->get_ID() ) );
 
 		// Should the function complete the rest of the fields
@@ -41,6 +44,38 @@ class OpenJobs extends Helpers\Singleton {
 		return $openjob;
 
 	}
+
+
+
+	/**
+	 * Get a Job Offer by its id
+	 *
+	 * @author  Mauricio Gelves <mg@maugelves.com>
+	 * @param   $openjob_id int
+	 * @return  false|OpenJob
+	 */
+	public function get_by_id( $openjob_id ) {
+
+		$openjob = false;
+
+		$args = array(
+			'post_status'   => 'publish',
+			'post_type'     => 'joboffer',
+			'p'             => $openjob_id
+		);
+
+		$query = new \WP_Query( $args );
+
+		// Check query is not empty
+		if( ! $query->have_posts() ) return $openjob;
+
+		// Get the object from the post
+		$openjob = self::get_openjob_from_post( $query->posts[0] );
+
+		return $openjob;
+
+	}
+
 
 
 
