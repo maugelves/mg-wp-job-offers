@@ -30,14 +30,16 @@ function fn_xelio_open_jobs(){
 		foreach( $openjobs as $openjob ): /* @var $openjob \MGJO\models\OpenJob */
 
 			// Variables
-			$taxlevels = wp_get_post_terms( $openjob->get_ID(), 'openjoblevel', ['fields' => 'names'] );
-			$taxleves_str = empty( $taxlevels ) ? "" : implode( ", ", $taxlevels );
+			$taxlevels      = wp_get_post_terms( $openjob->get_ID(), 'openjoblevel', ['fields' => 'names'] );
+			$taxleves_str   = empty( $taxlevels ) ? "" : implode( ", ", $taxlevels );
+			$link           = apply_filters( 'mgjo_joboffer_link', $openjob->get_link(), $openjob->get_ID() );
+
 
 			$output .= '<tr>';
 			$output .= '<td>' . $openjob->get_title() . '</td>';
 			$output .= '<td class="mgjotbl__visiblelg">' . $openjob->get_place() . '</td>';
 			$output .= '<td class="mgjotbl__hidexs">' . $taxleves_str . '</td>';
-			$output .= '<td class="mgjotbl__tdright"><a href="' . $openjob->get_link() . '"><span class="icon-xe-plus-icon mgjotbl__icon"></span></a></td>';
+			$output .= '<td class="mgjotbl__tdright"><a href="' . $link . '"><span class="icon-xe-plus-icon mgjotbl__icon"></span></a></td>';
 			$output .= '</tr>';
 
 		endforeach;

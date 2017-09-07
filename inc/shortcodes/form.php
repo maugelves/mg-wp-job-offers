@@ -103,10 +103,14 @@ function fn_mgjo_applicant_form() {
 
         <?php //TODO: Agregar el ID de la oferta de trabajo en un hidden ?>
 
+        <?php if( isset( $_GET['jid'] ) && !empty( $_GET['jid'] ) ): ?>
+        <input type="hidden" name="jobofferid" value="<?php urlencode( base64_decode( $_GET['jid'] ) ); ?>">
+        <?php endif; ?>
+
 		<input type="hidden" name="action" value="newapplicant">
 
 		<input type="submit" value="<?php _e("Enviar candidatura","mg-wp-job-offers"); ?>">
-        
+
 	</form>
 	
 
