@@ -21,11 +21,13 @@ function fn_mgjo_applicant_form() {
 		<div class="mgjoform__row">
 			<label for="txtname"><?php _e("Nombre completo","mg-wp-job-offers"); ?>:</label>
 			<input type="text" id="txtname" name="txtname">
+            <span class="mgjo__errmsg"><?php _e('Campo inválido. Revista este dato.','mg-wp-job-offers'); ?></span>
 		</div>
 
         <div class="mgjoform__row">
             <label for="txtemail"><?php _e("Correo electrónico","mg-wp-job-offers"); ?>:</label>
-            <input type="text" id="txtemail" name="txtemail">
+            <input type="email" id="txtemail" name="txtemail">
+            <span class="mgjo__errmsg"><?php _e('Campo inválido. Revista este dato.','mg-wp-job-offers'); ?></span>
         </div>
 
         <div class="mgjoform__row">
@@ -55,39 +57,45 @@ function fn_mgjo_applicant_form() {
 
         <div class="mgjoform__row">
             <label for="ddlgender"><?php _e("Sexo","mg-wp-job-offers"); ?>:</label>
-            <select name="ddlgender" id="ddlgender">
-                <option value="f"><?php _e('Femenino', 'mg-wp-job-offers'); ?></option>
-                <option value="m"><?php _e('Masculino', 'mg-wp-job-offers'); ?></option>
-            </select>
+            <div class="select-style">
+                <select name="ddlgender" id="ddlgender">
+                    <option value="f"><?php _e('Femenino', 'mg-wp-job-offers'); ?></option>
+                    <option value="m"><?php _e('Masculino', 'mg-wp-job-offers'); ?></option>
+                </select>
+            </div>
         </div>
 
         <div class="mgjoform__row">
             <label for="ddlmovility"><?php _e("Movilidad geográfica","mg-wp-job-offers"); ?>:</label>
-            <select name="ddlmovility" id="ddlmovility">
-                <option value="1">Sí</option>
-                <option value="0">No</option>
-            </select>
+            <div class="select-style">
+                <select name="ddlmovility" id="ddlmovility">
+                    <option value="0">No</option>
+                    <option value="1">Sí</option>
+                </select>
+            </div>
         </div>
 
 
         <div class="mgjoform__row">
-            <label for="ddlmovility"><?php _e("Años de experiencia","mg-wp-job-offers"); ?>:</label>
-            <?php
-                $args = array(
-                    'name'          => 'ddlmovility',
-                    'hide_empty'    => 0,
-                    'id'            => 'ddlmovility',
-                    'taxonomy'      => 'jobexperience'
-                );
+            <label for="jobexperience"><?php _e("Años de experiencia","mg-wp-job-offers"); ?>:</label>
+            <div class="select-style">
+                <?php
+                    $args = array(
+                        'name'          => 'jobexperience',
+                        'hide_empty'    => 0,
+                        'id'            => 'jobexperience',
+                        'taxonomy'      => 'jobexperience'
+                    );
 
-                wp_dropdown_categories( $args );
-
-            ?>
+                    wp_dropdown_categories( $args );
+                ?>
+            </div>
         </div>
 
         <div class="mgjoform__row">
             <label for="txtdescription"><?php _e("Experiencia profesional","mg-wp-job-offers"); ?>:</label>
             <textarea name="txtdescription" id="txtdescription" cols="30" rows="10"></textarea>
+            <span class="mgjo__errmsg"><?php _e('Campo inválido. Revista este dato.','mg-wp-job-offers'); ?></span>
         </div>
 
         <div class="mgjoform__row">
@@ -101,7 +109,14 @@ function fn_mgjo_applicant_form() {
             <textarea name="txteducation" id="txteducation" cols="30" rows="10"></textarea>
         </div>
 
-        <?php //TODO: Agregar el ID de la oferta de trabajo en un hidden ?>
+
+        <div class="mgjoform__row">
+            <?php
+            // Create a Filter to apply changes on the Legal Page URL
+            $legalurl = apply_filters('mgjo_legal_page_link', '/legal');
+            ?>
+            <input id="chklegal" name="chklegal" type="checkbox"><label for="chklegal" class="mgjoform__legal"><?php printf( __('Aceptación de las <a href="%s">Condiciones Legales</a> de la oferta.', 'mg-wp-job-offers'), $legalurl ); ?></label>
+        </div>
 
         <?php if( isset( $_GET['jid'] ) && !empty( $_GET['jid'] ) ): ?>
         <input type="hidden" name="jobofferid" value="<?php urlencode( base64_decode( $_GET['jid'] ) ); ?>">
@@ -109,7 +124,9 @@ function fn_mgjo_applicant_form() {
 
 		<input type="hidden" name="action" value="newapplicant">
 
-		<input type="submit" value="<?php _e("Enviar candidatura","mg-wp-job-offers"); ?>">
+        <div class="mgjoform__row mgjoform__row--center">
+		    <input type="submit" class="xe-button mgjo__submit" value="<?php _e("Enviar candidatura","mg-wp-job-offers"); ?>">
+        </div>
 
 	</form>
 	
