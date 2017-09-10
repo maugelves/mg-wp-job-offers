@@ -17,22 +17,30 @@ class JobApplicants
 		if( !taxonomy_exists('languages') )
 			add_action( 'init', array( $this, 'create_tax_languages' ), 10 );
 
-		//add_action('admin_menu', array($this, 'add_applicants_menu_link') );
-
 		add_filter( 'post_updated_messages', array($this, 'updated_messages_cb' ) );
 
 
-		add_filter( 'enter_title_here', array( $this, 'change_title_placeholder' ) );
+		add_filter( 'enter_title_here', array( $this, 'change_title_placeholder_applicant' ) );
 
 	}
 
 
 
-	/*function add_applicants_menu_link() {
-		global $submenu;
-		$permalink  = admin_url() . 'edit.php?post_type=jobapplicant';
-		$submenu['edit.php?post_type=joboffer'][] = array( __('Postulantes', MGJO_TDOMAIN ), 'edit_applicant', $permalink );
-	}*/
+	/**
+	 *  Change the Post Title placeholder
+	 *  @param $title
+	 *
+	 *  @return string
+	 */
+	public function change_title_placeholder_applicant( $title ) {
+		$screen = get_current_screen();
+
+		if  ( 'jobapplicant' == $screen->post_type )
+			$title = __('Especifica el nombre del postulante', MGJO_TDOMAIN );
+
+
+		return $title;
+	}
 
 
 	/**
@@ -157,10 +165,11 @@ class JobApplicants
 				'not_found'                     => __('idioma no encontrado', MGJO_TDOMAIN)
 			),
 			'hierarchical'  => true,
-			'show_ui'       => false
+			'show_ui'       => true,
+			'meta_box_cb'   => false
 		);
 
-		register_taxonomy( 'languages', 'jobapplicant', $args );
+		register_taxonomy( 'mgjo-languages', 'jobapplicant', $args );
 
 	}
 

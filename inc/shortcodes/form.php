@@ -52,15 +52,16 @@ function fn_mgjo_applicant_form() {
 
         <div class="mgjoform__row">
             <label for="txtbirthdate"><?php _e("Fecha de nacimiento","mg-wp-job-offers"); ?>:</label>
-            <input type="text" id="txtbirthdate" name="txtbirthdate" placeholder="dd/mm/aaaa">
+            <input type="text" id="txtbirthdate" name="txtbirthdate" placeholder="dd/mm/aaaa" maxlength="10">
+            <span class="mgjo__errmsg"><?php _e('Completa la fecha con el formato dd/mm/aaaa.','mg-wp-job-offers'); ?></span>
         </div>
 
         <div class="mgjoform__row">
             <label for="ddlgender"><?php _e("Sexo","mg-wp-job-offers"); ?>:</label>
             <div class="select-style">
                 <select name="ddlgender" id="ddlgender">
-                    <option value="f"><?php _e('Femenino', 'mg-wp-job-offers'); ?></option>
-                    <option value="m"><?php _e('Masculino', 'mg-wp-job-offers'); ?></option>
+                    <option value="2"><?php _e('Femenino', 'mg-wp-job-offers'); ?></option>
+                    <option value="1"><?php _e('Masculino', 'mg-wp-job-offers'); ?></option>
                 </select>
             </div>
         </div>
@@ -100,7 +101,13 @@ function fn_mgjo_applicant_form() {
 
         <div class="mgjoform__row">
             <label for="txtlanguages"><?php _e("Idiomas","mg-wp-job-offers"); ?>:</label>
-            <?php echo get_terms_chekboxes('languages', $args = array('hide_empty'=>false)); ?>
+            <?php echo get_terms_chekboxes('mgjo-languages', $args = array('hide_empty'=>false)); ?>
+        </div>
+
+
+        <div class="mgjoform__row">
+            <label for="txtitknow"><?php _e("Conocimientos informáticos","mg-wp-job-offers"); ?>:</label>
+            <textarea name="txtitknow" id="txtitknow" cols="30" rows="10"></textarea>
         </div>
 
 
@@ -115,14 +122,19 @@ function fn_mgjo_applicant_form() {
             // Create a Filter to apply changes on the Legal Page URL
             $legalurl = apply_filters('mgjo_legal_page_link', '/legal');
             ?>
-            <input id="chklegal" name="chklegal" type="checkbox"><label for="chklegal" class="mgjoform__legal"><?php printf( __('Aceptación de las <a href="%s">Condiciones Legales</a> de la oferta.', 'mg-wp-job-offers'), $legalurl ); ?></label>
+            <input id="chklegal" name="chklegal" type="checkbox" checked="checked"><label for="chklegal" class="mgjoform__legal"><?php printf( __('Aceptación de las <a href="%s">Condiciones Legales</a> de la oferta.', 'mg-wp-job-offers'), $legalurl ); ?></label>
         </div>
 
         <?php if( isset( $_GET['jid'] ) && !empty( $_GET['jid'] ) ): ?>
-        <input type="hidden" name="jobofferid" value="<?php urlencode( base64_decode( $_GET['jid'] ) ); ?>">
+        <input type="hidden" name="jobofferid" value="<?php echo urlencode( base64_decode( $_GET['jid'] ) ); ?>">
         <?php endif; ?>
 
 		<input type="hidden" name="action" value="newapplicant">
+
+        <?php
+            // WP NONCE FIELD
+            wp_nonce_field( 'newapplicantnone' );
+        ?>
 
         <div class="mgjoform__row mgjoform__row--center">
 		    <input type="submit" class="xe-button mgjo__submit" value="<?php _e("Enviar candidatura","mg-wp-job-offers"); ?>">

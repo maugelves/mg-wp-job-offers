@@ -214,6 +214,25 @@
                 ]
             },
             {
+                "key": "field_59b5648cc9b1a",
+                "label": "Movilidad",
+                "name": "mgjoapp-movility",
+                "type": "true_false",
+                "instructions": "¿El postulante está dispuesto a movilizarse por el trabajo?",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
                 "key": "field_597afa97a02bf",
                 "label": "Experiencia",
                 "name": "",
@@ -243,7 +262,7 @@
                     "id": ""
                 },
                 "taxonomy": "jobexperience",
-                "field_type": "checkbox",
+                "field_type": "radio",
                 "allow_null": 0,
                 "add_term": 0,
                 "save_terms": 1,
@@ -269,25 +288,6 @@
                 "maxlength": "",
                 "rows": 5,
                 "new_lines": ""
-            },
-            {
-                "key": "field_597b093939367",
-                "label": "CV",
-                "name": "mgjoapp-cv",
-                "type": "file",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "url",
-                "library": "all",
-                "min_size": "",
-                "max_size": "",
-                "mime_types": ""
             },
             {
                 "key": "field_597afc5ea02c3",
@@ -318,9 +318,9 @@
                     "class": "",
                     "id": ""
                 },
-                "taxonomy": "language",
+                "taxonomy": "mgjo-languages",
                 "field_type": "checkbox",
-                "allow_null": 0,
+                "allow_null": 1,
                 "add_term": 0,
                 "save_terms": 1,
                 "load_terms": 0,

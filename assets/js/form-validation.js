@@ -6,6 +6,7 @@ jQuery(document).ready( function( $ ) {
 
         addEventListeners: function(){
 
+            // The user click the Submit button
             $('.mgjo__submit').click(function(e){
 
                 // Variables
@@ -13,6 +14,7 @@ jQuery(document).ready( function( $ ) {
                 var name        = $('#txtname');
                 var email       = $('#txtemail');
                 var jobexp      = $('#txtdescription');
+                var birthdate   = $('#txtbirthdate');
                 var result      = true; // Flag for the form validation
 
 
@@ -44,6 +46,24 @@ jQuery(document).ready( function( $ ) {
 
                 }
 
+                // Check the birthdate field
+                if( !$(birthdate).val() ) {
+                    $(birthdate).addClass( errorClass );
+                    $(birthdate).next().addClass('visible');
+                    result = false;
+                }
+                else {
+
+                    if( !mgjoform.validateBirthdate( $(birthdate).val() ) ) {
+
+                        $(birthdate).addClass( errorClass );
+                        $(birthdate).next().addClass('visible');
+                        result = false;
+
+                    }
+
+                }
+
 
                 // Check Job Experience Field
                 if( !$(jobexp).val() ) {
@@ -60,10 +80,33 @@ jQuery(document).ready( function( $ ) {
                 return result;
             });
 
+
+            // The user checks the Terms and Conditions
+            $('#chklegal').change( function(){
+
+                if( $(this).is(':checked') ) {
+
+                    $('.mgjo__submit').removeAttr('disabled');
+
+                }
+                else {
+
+                    $('.mgjo__submit').attr('disabled', 'disabled');
+
+                }
+
+            });
+
         },
         init: function(){
 
             mgjoform.addEventListeners();
+
+        },
+        validateBirthdate: function(date) {
+
+            var reg = /(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/;
+            return date.match(reg);
 
         },
         validateEmail: function (email) {
