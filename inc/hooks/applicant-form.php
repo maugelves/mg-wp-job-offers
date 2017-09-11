@@ -79,9 +79,7 @@ function fn_newapplicant(){
 	if( isset( $_POST['ddlmovility'] ) ) update_field('mgjoapp-movility', sanitize_text_field( $_POST['ddlmovility'] ), $post_id );            // Movility
 
 	// Redirect the user to the same page with a Query String with Succes or Error
-	$jobid      = isset( $_POST['jobofferid'] ) ? $_POST['jobofferid'] : false;
-	$redirect   = apply_filters('mgjo_joboffer_link', '/drop-your-cv', $jobid);
-	$redirect   = ($jobid) ? $redirect . "&success=1" : $redirect . "?success=1";
+	$redirect = add_query_arg( 'success', '1', $_SERVER['HTTP_REFERER'] );
 	wp_redirect( $redirect ); exit;
 
 }
