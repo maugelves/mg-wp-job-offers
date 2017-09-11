@@ -16,6 +16,10 @@ function fn_mgjo_applicant_form() {
 
 	ob_start(); ?>
 
+    <?php
+	// Show the Form only if we don't have a $_GET success parameter(?success=1)
+    if( ! isset( $_GET['success'] ) ):
+    ?>
 	<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post" class="mgjoform">
 
 		<div class="mgjoform__row">
@@ -141,7 +145,20 @@ function fn_mgjo_applicant_form() {
         </div>
 
 	</form>
-	
+    <?php endif; ?>
+
+
+    <?php
+    // Show the Success message if the $_GET parameter exists.
+	if( isset( $_GET['success'] )  &&  $_GET['success'] == 1 ): ?>
+        <div class="mgjoform__success">
+            <img class="mgjoform__success__i" src="<?php echo MGJO_URL; ?>/assets/img/formulario-exito.svg">
+            <h2 class="mgjoform__success__h"><?php _e('¡Formulario recibido con éxito!','mg-wp-job-offers'); ?></h2>
+            <p class="mgjoform__success__b"><?php _e('Muchas gracias por tomar parte de tu tiempo en escribirnos.', 'mg-wp-job-offers'); ?></p>
+        </div>
+    <?php endif; ?>
+
+
 
 	<?php
 	$output = ob_get_contents();

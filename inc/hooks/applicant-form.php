@@ -80,7 +80,7 @@ function fn_newapplicant(){
 
 	// Redirect the user to the same page with a Query String with Succes or Error
 	$redirect = add_query_arg( 'success', '1', $_SERVER['HTTP_REFERER'] );
-	wp_redirect( $redirect ); exit;
+	wp_redirect( $redirect . ";#mgform" ); exit;
 
 }
 add_action('admin_post_nopriv_newapplicant', 'fn_newapplicant'); // Para usuarios no logueados

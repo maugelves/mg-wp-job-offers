@@ -97,6 +97,17 @@ jQuery(document).ready( function( $ ) {
 
             });
 
+
+            // The user clickr on "Inscribirme" button
+            $('.mgjo__button').click(function(){
+
+                $('html, body').animate({
+                    scrollTop: $('#mgform').offset().top
+                }, 500);
+                return false;
+
+            });
+
         },
         init: function(){
 
