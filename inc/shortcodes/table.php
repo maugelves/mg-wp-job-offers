@@ -21,9 +21,9 @@ function fn_xelio_open_jobs(){
 
 		$output .= '<table class="mgjotbl">';
 		$output .= '<tr>';
-		$output .= '<th class="mgjotbl__th">' . __("Nombre del puesto", "xelio-wp-projects") . '</th>';
-		$output .= '<th class="mgjotbl__th mgjotbl__visiblelg">' . __("Lugar", "xelio-wp-projects") . '</th>';
-		$output .= '<th class="mgjotbl__th mgjotbl__hidexs">' . __("Experiencia", "xelio-wp-projects") . '</th>';
+		$output .= '<th class="mgjotbl__th">' . __("Nombre del puesto", "mg-wp-job-offers") . '</th>';
+		$output .= '<th class="mgjotbl__th mgjotbl__visiblelg">' . __("Lugar", "mg-wp-job-offers") . '</th>';
+		$output .= '<th class="mgjotbl__th mgjotbl__hidexs">' . __("Experiencia", "mg-wp-job-offers") . '</th>';
 		$output .= '<th class="mgjotbl__th"></th>';
 		$output .= '</tr>';
 

@@ -1,0 +1,125 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-12 10:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: inc/shortcodes/form.php:26
+msgid "Nombre completo"
+msgstr ""
+
+#: inc/shortcodes/form.php:28 inc/shortcodes/form.php:34
+#: inc/shortcodes/form.php:103
+msgid "Campo inválido. Revista este dato."
+msgstr ""
+
+#: inc/shortcodes/form.php:32
+msgid "Correo electrónico"
+msgstr ""
+
+#: inc/shortcodes/form.php:38
+msgid "Teléfono móvil"
+msgstr ""
+
+#: inc/shortcodes/form.php:43
+msgid "Ciudad"
+msgstr ""
+
+#: inc/shortcodes/form.php:48
+msgid "País de residencia"
+msgstr ""
+
+#: inc/shortcodes/form.php:53
+msgid "Nacionalidad"
+msgstr ""
+
+#: inc/shortcodes/form.php:58
+msgid "Fecha de nacimiento"
+msgstr ""
+
+#: inc/shortcodes/form.php:60
+msgid "Completa la fecha con el formato dd/mm/aaaa."
+msgstr ""
+
+#: inc/shortcodes/form.php:64
+msgid "Sexo"
+msgstr ""
+
+#: inc/shortcodes/form.php:67
+msgid "Femenino"
+msgstr ""
+
+#: inc/shortcodes/form.php:68
+msgid "Masculino"
+msgstr ""
+
+#: inc/shortcodes/form.php:74
+msgid "Movilidad geográfica"
+msgstr ""
+
+#: inc/shortcodes/form.php:85
+msgid "Años de experiencia"
+msgstr ""
+
+#: inc/shortcodes/form.php:101
+msgid "Experiencia profesional"
+msgstr ""
+
+#: inc/shortcodes/form.php:107
+msgid "Idiomas"
+msgstr ""
+
+#: inc/shortcodes/form.php:113
+msgid "Conocimientos informáticos"
+msgstr ""
+
+#: inc/shortcodes/form.php:119
+msgid "Educación"
+msgstr ""
+
+#: inc/shortcodes/form.php:129
+#, php-format
+msgid "Aceptación de las <a href=\"%s\">Condiciones Legales</a> de la oferta."
+msgstr ""
+
+#: inc/shortcodes/form.php:144
+msgid "Enviar candidatura"
+msgstr ""
+
+#: inc/shortcodes/form.php:156
+msgid "¡Formulario recibido con éxito!"
+msgstr ""
+
+#: inc/shortcodes/form.php:157
+msgid "Muchas gracias por tomar parte de tu tiempo en escribirnos."
+msgstr ""
+
+#. Name of the plugin
+msgid "MG WP Job Offers"
+msgstr ""
+
+#. Description of the plugin
+msgid "WordPress plugin to manage Job offers"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/maugelves/mg-wp-job-offers"
+msgstr ""
+
+#. Author of the plugin
+msgid "Mauricio Gelves"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://maugelves.com"
+msgstr ""
