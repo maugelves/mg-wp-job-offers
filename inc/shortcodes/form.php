@@ -126,7 +126,7 @@ function fn_mgjo_applicant_form() {
             // Create a Filter to apply changes on the Legal Page URL
             $legalurl = apply_filters('mgjo_legal_page_link', '/legal');
             ?>
-            <input id="chklegal" name="chklegal" type="checkbox"><label for="chklegal" class="mgjoform__legal"><?php printf( __('Aceptación de las <a href="%s">Condiciones Legales</a> de la oferta.', 'mg-wp-job-offers'), $legalurl ); ?></label>
+            <input id="chklegal" name="chklegal" type="checkbox"><label for="chklegal" class="mgjoform__legal"><?php printf( __('Aceptación de las <a href="%s">Condiciones Legales</a>.', 'mg-wp-job-offers'), $legalurl ); ?></label>
         </div>
 
         <?php if( isset( $_GET['jid'] ) && !empty( $_GET['jid'] ) ): ?>
