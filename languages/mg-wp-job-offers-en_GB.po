@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MG WP Job Offers\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-19 18:10+0200\n"
-"PO-Revision-Date: 2017-09-19 18:10+0200\n"
-"Last-Translator: mgelves <mgelves@gmail.com>\n"
+"POT-Creation-Date: 2017-09-27 16:03+0200\n"
+"PO-Revision-Date: 2017-09-27 16:04+0200\n"
+"Last-Translator: Sara Alonso <sara.alonso@x-elio.com>\n"
 "Language-Team: English (UK)\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
@@ -17,202 +17,202 @@ msgstr ""
 #: inc/cpts/job-applicants.php:55 inc/cpts/job-applicants.php:56
 #: inc/cpts/job-applicants.php:89
 msgid "Postulantes"
-msgstr ""
+msgstr "Applicants"
 
 #: inc/acfs/applicants.php:11 inc/acfs/applicants.php:50
 msgid "Datos personales"
-msgstr ""
+msgstr "Personal data"
 
 #: inc/acfs/applicants.php:27
 msgid "Oferta de trabajo"
-msgstr ""
+msgstr "Position"
 
 #: inc/acfs/applicants.php:65
 msgid "Email"
-msgstr ""
+msgstr "Emal"
 
 #: inc/acfs/applicants.php:83
 msgid "Número de móvil"
-msgstr ""
+msgstr "Mobile number: "
 
 #: inc/acfs/applicants.php:102 inc/shortcodes/form.php:64
 msgid "Sexo"
-msgstr ""
+msgstr "Gender"
 
 #: inc/acfs/applicants.php:114 inc/shortcodes/form.php:68
 msgid "Masculino"
-msgstr ""
+msgstr "Male"
 
 #: inc/acfs/applicants.php:115 inc/shortcodes/form.php:67
 msgid "Femenino"
-msgstr ""
+msgstr "Female"
 
 #: inc/acfs/applicants.php:129 inc/shortcodes/form.php:58
 msgid "Fecha de nacimiento"
-msgstr ""
+msgstr "Birth date: "
 
 #: inc/acfs/applicants.php:148
 msgid "Dirección"
-msgstr ""
+msgstr "Address"
 
 #: inc/acfs/applicants.php:163 inc/shortcodes/form.php:43
 msgid "Ciudad"
-msgstr ""
+msgstr "City"
 
 #: inc/acfs/applicants.php:182 inc/shortcodes/form.php:48
 msgid "País de residencia"
-msgstr ""
+msgstr "Country of residence"
 
 #: inc/acfs/applicants.php:201 inc/shortcodes/form.php:53
 msgid "Nacionalidad"
-msgstr ""
+msgstr "Nationality"
 
 #: inc/acfs/applicants.php:222
 msgid "Movilidad"
-msgstr ""
+msgstr "Geographic mobility"
 
 #: inc/acfs/applicants.php:225
 msgid "¿El postulante está dispuesto a movilizarse por el trabajo?"
-msgstr ""
+msgstr "Geographic mobility "
 
 #: inc/acfs/applicants.php:241 inc/cpts/job-applicants.php:121
 #: inc/cpts/job-applicants.php:124 inc/shortcodes/table.php:26
 msgid "Experiencia"
-msgstr ""
+msgstr "Experience"
 
 #: inc/acfs/applicants.php:257 inc/shortcodes/form.php:85
 msgid "Años de experiencia"
-msgstr ""
+msgstr "Years of experience "
 
 #: inc/acfs/applicants.php:279
 msgid "Descripción de experiencia"
-msgstr ""
+msgstr "Describe briefly your experience"
 
 #: inc/acfs/applicants.php:298
 msgid "Conocimientos"
-msgstr ""
+msgstr "Knowledge"
 
 #: inc/acfs/applicants.php:314 inc/cpts/job-applicants.php:152
 #: inc/cpts/job-applicants.php:154 inc/shortcodes/form.php:107
 msgid "Idiomas"
-msgstr ""
+msgstr "Languages"
 
 #: inc/acfs/applicants.php:336 inc/shortcodes/form.php:113
 msgid "Conocimientos informáticos"
-msgstr ""
+msgstr "Computer skills"
 
 #: inc/acfs/applicants.php:355 inc/shortcodes/form.php:119
 msgid "Educación"
-msgstr ""
+msgstr "Education"
 
 #: inc/acfs/applicants.php:371
 msgid "Títulos"
-msgstr ""
+msgstr "Degree "
 
 #: inc/acfs/joboffers.php:7 inc/cpts/job-offers.php:89
 #: inc/cpts/job-offers.php:93 inc/cpts/job-offers.php:105
 msgid "Trabajos"
-msgstr ""
+msgstr "Jobs"
 
 #: inc/acfs/joboffers.php:11 inc/shortcodes/table.php:25
 msgid "Lugar"
-msgstr ""
+msgstr "City"
 
 #: inc/acfs/joboffers.php:14
 msgid "Indique la ciudad y país del puesto de trabajo"
-msgstr ""
+msgstr "City and position"
 
 #: inc/acfs/joboffers.php:30
 msgid "Responsabilidades"
-msgstr ""
+msgstr "Responsibilities"
 
 #: inc/acfs/joboffers.php:45
 msgid "Agregar responsabilidad"
-msgstr ""
+msgstr "Add responsibility "
 
 #: inc/acfs/joboffers.php:49
 msgid "Responsabilidad"
-msgstr ""
+msgstr "Responsibility "
 
 #: inc/acfs/joboffers.php:70
 msgid "Requisitos"
-msgstr ""
+msgstr "Requirements"
 
 #: inc/acfs/joboffers.php:85
 msgid "Agrear requisito"
-msgstr ""
+msgstr "Add requirements"
 
 #: inc/acfs/joboffers.php:89
 msgid "Requerimiento"
-msgstr ""
+msgstr "Requirement "
 
 #: inc/acfs/joboffers.php:110
 msgid "Rango Salarial"
-msgstr ""
+msgstr "Salary range"
 
 #: inc/acfs/joboffers.php:113
 msgid "Indique el rango salarial mínimo y máximo para el puesto de trabajo"
-msgstr ""
+msgstr "Minimum wage and maximum wage"
 
 #: inc/acfs/joboffers.php:125
 msgid "Salario mínimo"
-msgstr ""
+msgstr "Minimum wage"
 
 #: inc/acfs/joboffers.php:146
 msgid "Salario máximo"
-msgstr ""
+msgstr "Maximum wage"
 
 #: inc/cpts/job-applicants.php:39
 msgid "Especifica el nombre del postulante"
-msgstr ""
+msgstr "Name"
 
 #: inc/cpts/job-applicants.php:57
 msgid "Item Attributes"
-msgstr ""
+msgstr "Item Attributes"
 
 #: inc/cpts/job-applicants.php:58
 msgid "Parent Item:"
-msgstr ""
+msgstr "Parent Item:"
 
 #: inc/cpts/job-applicants.php:59
 msgid "Todos los postulantes"
-msgstr ""
+msgstr "All candidates"
 
 #: inc/cpts/job-applicants.php:60
 msgid "Agregar nuevo postulante"
-msgstr ""
+msgstr "Add new candidate"
 
 #: inc/cpts/job-applicants.php:61
 msgid "Agregar nuevo"
-msgstr ""
+msgstr "Add new"
 
 #: inc/cpts/job-applicants.php:62
 msgid "Nuevo Postulante"
-msgstr ""
+msgstr "New candidate"
 
 #: inc/cpts/job-applicants.php:63
 msgid "Editar Postulante"
-msgstr ""
+msgstr "Edit candidate"
 
 #: inc/cpts/job-applicants.php:64
 msgid "Actualizar Postulante"
-msgstr ""
+msgstr "Update candidate"
 
 #: inc/cpts/job-applicants.php:65
 msgid "Ver Postulante"
-msgstr ""
+msgstr "Show candidate"
 
 #: inc/cpts/job-applicants.php:66
 msgid "Ver Postulantes"
-msgstr ""
+msgstr "Show candidates"
 
 #: inc/cpts/job-applicants.php:67
 msgid "Buscar Postulantes"
-msgstr ""
+msgstr "Look for candidates"
 
 #: inc/cpts/job-applicants.php:68
 msgid "No encontrado"
-msgstr ""
+msgstr "Not found"
 
 #: inc/cpts/job-applicants.php:69
 msgid "No encontrado en la papelera"
@@ -220,31 +220,31 @@ msgstr ""
 
 #: inc/cpts/job-applicants.php:123
 msgid "Años Experiencia"
-msgstr ""
+msgstr "Years of experience"
 
 #: inc/cpts/job-applicants.php:125
 msgid "Todas las experiencias"
-msgstr ""
+msgstr "All experiences"
 
 #: inc/cpts/job-applicants.php:126
 msgid "Editar experiencia"
-msgstr ""
+msgstr "Edit experience"
 
 #: inc/cpts/job-applicants.php:127
 msgid "Ver experiencia"
-msgstr ""
+msgstr "Show experience"
 
 #: inc/cpts/job-applicants.php:128
 msgid "Actualizar experiencia"
-msgstr ""
+msgstr "Update experience"
 
 #: inc/cpts/job-applicants.php:129
 msgid "Agregar nueva experiencia"
-msgstr ""
+msgstr "Add new experience"
 
 #: inc/cpts/job-applicants.php:130
 msgid "Nueva experiencia"
-msgstr ""
+msgstr "New experience"
 
 #: inc/cpts/job-applicants.php:131
 msgid "Buscar experiencias"
@@ -256,43 +256,43 @@ msgstr ""
 
 #: inc/cpts/job-applicants.php:133
 msgid "Agregar o quitar experiencias"
-msgstr ""
+msgstr "Add or delete experiences"
 
 #: inc/cpts/job-applicants.php:134
 msgid "Experiencia no encontrada"
-msgstr ""
+msgstr "Experience not found"
 
 #: inc/cpts/job-applicants.php:155
 msgid "Idioma"
-msgstr ""
+msgstr "Language"
 
 #: inc/cpts/job-applicants.php:156
 msgid "Todas los idiomas"
-msgstr ""
+msgstr "All languages"
 
 #: inc/cpts/job-applicants.php:157
 msgid "Editar idioma"
-msgstr ""
+msgstr "Edit language"
 
 #: inc/cpts/job-applicants.php:158
 msgid "Ver idioma"
-msgstr ""
+msgstr "Show language"
 
 #: inc/cpts/job-applicants.php:159
 msgid "Actualizar idioma"
-msgstr ""
+msgstr "Update language"
 
 #: inc/cpts/job-applicants.php:160
 msgid "Agregar nuevo idioma"
-msgstr ""
+msgstr "Add new language"
 
 #: inc/cpts/job-applicants.php:161
 msgid "Nuevo idioma"
-msgstr ""
+msgstr "New language"
 
 #: inc/cpts/job-applicants.php:162
 msgid "Buscar idiomas"
-msgstr ""
+msgstr "Search language"
 
 #: inc/cpts/job-applicants.php:163
 msgid "Separar idiomas por coma"
@@ -300,15 +300,15 @@ msgstr ""
 
 #: inc/cpts/job-applicants.php:164
 msgid "Agregar o quitar idiomas"
-msgstr ""
+msgstr "Add or delete language"
 
 #: inc/cpts/job-applicants.php:165
 msgid "idioma no encontrado"
-msgstr ""
+msgstr "Language not found"
 
 #: inc/cpts/job-applicants.php:188
 msgid "Nombre del postulante"
-msgstr ""
+msgstr "Name of candidate."
 
 #: inc/cpts/job-applicants.php:206 inc/cpts/job-applicants.php:207
 #: inc/cpts/job-offers.php:140 inc/cpts/job-offers.php:141
@@ -342,11 +342,11 @@ msgstr ""
 
 #: inc/cpts/job-offers.php:47
 msgid "Nivel de Experiencia"
-msgstr ""
+msgstr "Level of experience"
 
 #: inc/cpts/job-offers.php:49 inc/cpts/job-offers.php:50
 msgid "Nivel"
-msgstr ""
+msgstr "Level"
 
 #: inc/cpts/job-offers.php:51
 msgid "Todas las niveles"
@@ -354,11 +354,11 @@ msgstr ""
 
 #: inc/cpts/job-offers.php:52
 msgid "Editar nivel"
-msgstr ""
+msgstr "Edit level"
 
 #: inc/cpts/job-offers.php:53
 msgid "Ver nivel"
-msgstr ""
+msgstr "Show level"
 
 #: inc/cpts/job-offers.php:54
 msgid "Actualizar nivel"
@@ -370,7 +370,7 @@ msgstr ""
 
 #: inc/cpts/job-offers.php:56
 msgid "Nueva nivel"
-msgstr ""
+msgstr "New level"
 
 #: inc/cpts/job-offers.php:57
 msgid "Buscar niveles"
@@ -386,7 +386,7 @@ msgstr ""
 
 #: inc/cpts/job-offers.php:60
 msgid "Nivel no encontrado"
-msgstr ""
+msgstr "Level not found"
 
 #: inc/cpts/job-offers.php:94
 msgid "Trabajo"
@@ -398,19 +398,19 @@ msgstr ""
 
 #: inc/cpts/job-offers.php:97
 msgid "Editar trabajo"
-msgstr ""
+msgstr "Edit job"
 
 #: inc/cpts/job-offers.php:98
 msgid "Nuevo trabajo"
-msgstr ""
+msgstr "New job"
 
 #: inc/cpts/job-offers.php:99
 msgid "Ver trabajo"
-msgstr ""
+msgstr "Show job"
 
 #: inc/cpts/job-offers.php:100
 msgid "Ver trabajos"
-msgstr ""
+msgstr "Show jobs"
 
 #: inc/cpts/job-offers.php:101
 msgid "Buscar trabajos"
@@ -418,7 +418,7 @@ msgstr ""
 
 #: inc/cpts/job-offers.php:102
 msgid "No se encontraron trabajos"
-msgstr ""
+msgstr "Jobs not found"
 
 #: inc/cpts/job-offers.php:103
 msgid "No hay registros eliminados"
@@ -556,7 +556,7 @@ msgstr ""
 
 #: inc/libs/class-tgm-plugin-activation.php:402
 msgid "Dismiss this notice"
-msgstr ""
+msgstr "Dismiss this notice"
 
 #: inc/libs/class-tgm-plugin-activation.php:403
 msgid ""
@@ -626,7 +626,7 @@ msgstr ""
 
 #: inc/libs/class-tgm-plugin-activation.php:2408
 msgid "Not Installed"
-msgstr ""
+msgstr "Not Installed"
 
 #: inc/libs/class-tgm-plugin-activation.php:2412
 msgid "Installed But Not Activated"
@@ -691,19 +691,19 @@ msgstr ""
 
 #: inc/libs/class-tgm-plugin-activation.php:2641
 msgid "Source"
-msgstr ""
+msgstr "Source"
 
 #: inc/libs/class-tgm-plugin-activation.php:2642
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: inc/libs/class-tgm-plugin-activation.php:2646
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: inc/libs/class-tgm-plugin-activation.php:2647
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: inc/libs/class-tgm-plugin-activation.php:2696
 #, php-format
@@ -730,7 +730,7 @@ msgstr ""
 
 #: inc/libs/class-tgm-plugin-activation.php:2816
 msgid "Update"
-msgstr ""
+msgstr "Update"
 
 #: inc/libs/class-tgm-plugin-activation.php:2819
 msgid "Activate"
@@ -784,6 +784,8 @@ msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
 
 #: inc/libs/class-tgm-plugin-activation.php:3602
 #, php-format
@@ -793,16 +795,16 @@ msgstr ""
 #: inc/libs/class-tgm-plugin-activation.php:3602
 #: inc/libs/class-tgm-plugin-activation.php:3610
 msgid "Show Details"
-msgstr ""
+msgstr "Show Details"
 
 #: inc/libs/class-tgm-plugin-activation.php:3602
 #: inc/libs/class-tgm-plugin-activation.php:3610
 msgid "Hide Details"
-msgstr ""
+msgstr "Hide Details"
 
 #: inc/libs/class-tgm-plugin-activation.php:3603
 msgid "All installations and activations have been completed."
-msgstr ""
+msgstr "All installations and activations have been completed."
 
 #: inc/libs/class-tgm-plugin-activation.php:3605
 #, php-format
@@ -814,6 +816,8 @@ msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
 
 #: inc/libs/class-tgm-plugin-activation.php:3610
 #, php-format
@@ -822,7 +826,7 @@ msgstr ""
 
 #: inc/libs/class-tgm-plugin-activation.php:3611
 msgid "All installations have been completed."
-msgstr ""
+msgstr "All installations have been completed."
 
 #: inc/libs/class-tgm-plugin-activation.php:3613
 #, php-format
@@ -831,52 +835,53 @@ msgstr ""
 
 #: inc/shortcodes/form.php:26
 msgid "Nombre completo"
-msgstr "Complete"
+msgstr "Name"
 
 #: inc/shortcodes/form.php:28 inc/shortcodes/form.php:34
 #: inc/shortcodes/form.php:103
 msgid "Campo inválido. Revista este dato."
-msgstr ""
+msgstr "Field not valid"
 
 #: inc/shortcodes/form.php:32
 msgid "Correo electrónico"
-msgstr ""
+msgstr "Email"
 
 #: inc/shortcodes/form.php:38
 msgid "Teléfono móvil"
-msgstr ""
+msgstr "Mobile phone"
 
 #: inc/shortcodes/form.php:60
 msgid "Completa la fecha con el formato dd/mm/aaaa."
-msgstr ""
+msgstr "Complete the date with the format dd/mm/aaaa"
 
 #: inc/shortcodes/form.php:74
 msgid "Movilidad geográfica"
-msgstr ""
+msgstr "Geographic mobility"
 
 #: inc/shortcodes/form.php:101
 msgid "Experiencia profesional"
-msgstr ""
+msgstr "Professional experience"
 
 #: inc/shortcodes/form.php:129
-#, php-format
-msgid "Aceptación de las <a href=\"%s\">Condiciones Legales</a> de la oferta."
-msgstr ""
+#, fuzzy, php-format
+#| msgid ""
+#| "Aceptación de las <a href=\"%s\">Condiciones Legales</a> de la oferta."
+msgid ""
+"Aceptación de las <a href=\"%s\" target=\"_blank\">Condiciones Legales</a>."
+msgstr "Acceptance of the legal terms of the offer"
 
 #: inc/shortcodes/form.php:144
 msgid "Enviar candidatura"
-msgstr ""
+msgstr "Send your application "
 
 #: inc/shortcodes/form.php:156
 msgid "¡Formulario recibido con éxito!"
-msgstr ""
+msgstr "Form received successfully!"
 
 #: inc/shortcodes/form.php:157
 msgid "Muchas gracias por tomar parte de tu tiempo en escribirnos."
-msgstr ""
+msgstr "Thank you very much for writing to us."
 
 #: inc/shortcodes/table.php:24
-#, fuzzy
-#| msgid "Nombre completo"
 msgid "Nombre del puesto"
-msgstr "Complete"
+msgstr "Position"

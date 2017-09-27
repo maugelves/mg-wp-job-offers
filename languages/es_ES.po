@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-09-20 12:41+0200\n"
-"PO-Revision-Date: 2017-09-20 12:41+0200\n"
+"POT-Creation-Date: 2017-09-27 16:03+0200\n"
+"PO-Revision-Date: 2017-09-27 16:03+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -864,7 +864,8 @@ msgstr ""
 
 #: inc/shortcodes/form.php:129
 #, php-format
-msgid "Aceptación de las <a href=\"%s\">Condiciones Legales</a>."
+msgid ""
+"Aceptación de las <a href=\"%s\" target=\"_blank\">Condiciones Legales</a>."
 msgstr ""
 
 #: inc/shortcodes/form.php:144
