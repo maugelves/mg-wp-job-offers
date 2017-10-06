@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MG WP Job Offers\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-27 16:03+0200\n"
-"PO-Revision-Date: 2017-09-27 16:04+0200\n"
+"POT-Creation-Date: 2017-09-27 16:14+0200\n"
+"PO-Revision-Date: 2017-09-27 16:27+0200\n"
 "Last-Translator: Sara Alonso <sara.alonso@x-elio.com>\n"
 "Language-Team: English (UK)\n"
 "Language: en_GB\n"
@@ -863,12 +863,11 @@ msgid "Experiencia profesional"
 msgstr "Professional experience"
 
 #: inc/shortcodes/form.php:129
-#, fuzzy, php-format
-#| msgid ""
-#| "Aceptación de las <a href=\"%s\">Condiciones Legales</a> de la oferta."
+#, php-format
 msgid ""
 "Aceptación de las <a href=\"%s\" target=\"_blank\">Condiciones Legales</a>."
-msgstr "Acceptance of the legal terms of the offer"
+msgstr ""
+"Acceptance of the <a href=“%s” target=“_blank”>legal terms</a> of the offer."
 
 #: inc/shortcodes/form.php:144
 msgid "Enviar candidatura"
