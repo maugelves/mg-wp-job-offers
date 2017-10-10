@@ -23,13 +23,13 @@ function fn_mgjo_applicant_form() {
 	<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post" class="mgjoform">
 
 		<div class="mgjoform__row">
-			<label for="txtname"><?php _e("Nombre completo","mg-wp-job-offers"); ?>:</label>
+			<label for="txtname"><?php _e("Nombre completo","mg-wp-job-offers"); ?><span class="mgjoform__required">*</span>:</label>
 			<input type="text" id="txtname" name="txtname">
             <span class="mgjo__errmsg"><?php _e('Campo inválido. Revista este dato.','mg-wp-job-offers'); ?></span>
 		</div>
 
         <div class="mgjoform__row">
-            <label for="txtemail"><?php _e("Correo electrónico","mg-wp-job-offers"); ?>:</label>
+            <label for="txtemail"><?php _e("Correo electrónico","mg-wp-job-offers"); ?><span class="mgjoform__required">*</span>:</label>
             <input type="email" id="txtemail" name="txtemail">
             <span class="mgjo__errmsg"><?php _e('Campo inválido. Revista este dato.','mg-wp-job-offers'); ?></span>
         </div>
@@ -55,7 +55,7 @@ function fn_mgjo_applicant_form() {
         </div>
 
         <div class="mgjoform__row">
-            <label for="txtbirthdate"><?php _e("Fecha de nacimiento","mg-wp-job-offers"); ?>:</label>
+            <label for="txtbirthdate"><?php _e("Fecha de nacimiento","mg-wp-job-offers"); ?><span class="mgjoform__required">*</span>:</label>
             <input type="text" id="txtbirthdate" name="txtbirthdate" placeholder="dd/mm/aaaa" maxlength="10">
             <span class="mgjo__errmsg"><?php _e('Completa la fecha con el formato dd/mm/aaaa.','mg-wp-job-offers'); ?></span>
         </div>
@@ -98,7 +98,7 @@ function fn_mgjo_applicant_form() {
         </div>
 
         <div class="mgjoform__row">
-            <label for="txtdescription"><?php _e("Experiencia profesional","mg-wp-job-offers"); ?>:</label>
+            <label for="txtdescription"><?php _e("Experiencia profesional","mg-wp-job-offers"); ?><span class="mgjoform__required">*</span>:</label>
             <textarea name="txtdescription" id="txtdescription" cols="30" rows="10"></textarea>
             <span class="mgjo__errmsg"><?php _e('Campo inválido. Revista este dato.','mg-wp-job-offers'); ?></span>
         </div>
@@ -126,7 +126,7 @@ function fn_mgjo_applicant_form() {
             // Create a Filter to apply changes on the Legal Page URL
             $legalurl = apply_filters('mgjo_legal_page_link', '/legal');
             ?>
-            <input id="chklegal" name="chklegal" type="checkbox"><label for="chklegal" class="mgjoform__legal"><?php printf( __('Aceptación de la <a href="%s" target="_blank">Política de Privacidad</a>.', 'mg-wp-job-offers'), pll_get_page_url('politica-de-privacidad') ); ?></label>
+            <input id="chklegal" name="chklegal" type="checkbox"><label for="chklegal" class="mgjoform__legal"><?php printf( __('Aceptación de la <a href="%s" target="_blank">Política de Privacidad</a><span class="mgjoform__required">*</span>.', 'mg-wp-job-offers'), pll_get_page_url('politica-de-privacidad') ); ?></label>
         </div>
 
         <?php if( isset( $_GET['jid'] ) && !empty( $_GET['jid'] ) ): ?>
