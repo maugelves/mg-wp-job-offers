@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-10-13 10:43+0200\n"
-"PO-Revision-Date: 2017-10-13 10:44+0200\n"
+"POT-Creation-Date: 2017-10-13 12:32+0200\n"
+"PO-Revision-Date: 2017-10-13 12:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -865,7 +865,7 @@ msgstr ""
 #: inc/shortcodes/form.php:129
 #, php-format
 msgid ""
-"Aceptación de la <a href=\"%s\" target=\"_blank\">Política de Privacidad</"
+"Aceptación de la <a href=%s target=\"_blank\">Política de Privacidad</"
 "a><span class=\"mgjoform__required\">*</span>."
 msgstr ""
 

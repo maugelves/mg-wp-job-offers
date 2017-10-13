@@ -126,7 +126,7 @@ function fn_mgjo_applicant_form() {
             // Create a Filter to apply changes on the Legal Page URL
             $legalurl = apply_filters('mgjo_legal_page_link', '/legal');
             ?>
-            <input id="chklegal" name="chklegal" type="checkbox"><label for="chklegal" class="mgjoform__legal"><?php printf( __('Aceptación de la <a href="%s" target="_blank">Política de Privacidad</a><span class="mgjoform__required">*</span>.', 'mg-wp-job-offers'), pll_get_page_url('politica-de-privacidad') ); ?></label>
+            <input id="chklegal" name="chklegal" type="checkbox"><label for="chklegal" class="mgjoform__legal"><?php printf( __('Aceptación de la <a href=%s target="_blank">Política de Privacidad</a><span class="mgjoform__required">*</span>.', 'mg-wp-job-offers'), pll_get_page_url('politica-de-privacidad') ); ?></label>
         </div>
 
         <?php if( isset( $_GET['jid'] ) && !empty( $_GET['jid'] ) ): ?>
